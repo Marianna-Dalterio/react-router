@@ -3,3 +3,9 @@
   border: 0;
   box-sizing: border-box;
 }
+
+.logo {
+  width: auto;
+  height: 40px;
+
+}
