@@ -2,6 +2,8 @@
 import { Link, NavLink } from "react-router-dom";
 
 import logo from "../assets/globe_logo.png";
+// Importo l'icona del carrello (ad esempio, da Font Awesome)
+import { FaShoppingCart } from "react-icons/fa";
 
 export default function Navbar() {
     return (
@@ -47,7 +49,8 @@ export default function Navbar() {
                                 aria-label="Search" />
                             <button className="btn btn-outline-dark " type="submit">Cerca</button>
                             <button className="btn btn-outline-dark ms-2 " type="button">
-                                Carrello 🛒
+                                <FaShoppingCart className="me-1" />
+                                {/* Aggiunto me-1 (margin-end) per distanziare l'icona dal testo */}
                             </button>
 
                         </form>
