@@ -18,14 +18,14 @@ export default function Products() {
 
 
     return (
-        <div className="container text-center">
+        <div className="container text-center pt-5">
             <h1>I nostri prodotti</h1>
             <div className="container">
                 <div className="row g-4">
 
                     {products.map((item) =>
 
-                        <div key={item.id} className="col-4 ">
+                        <div key={item.id} className="col-12 col-md-6 col-lg-4 ">
                             <div className="card h-100">
 
                                 <img
