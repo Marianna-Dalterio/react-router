@@ -10,7 +10,7 @@ export default function Navbar() {
         // As a heading 
         <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div className="container-md">
-                <span className="navbar-brand mb-0 h1" >
+                <span className="navbar-brand mb-0" >
                     <img src={logo} alt="logo" className="logo" />
                 </span>
                 {/* ✨ 1. PULSANTE TOGGLER ✨ */}

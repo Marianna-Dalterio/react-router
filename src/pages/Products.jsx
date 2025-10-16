@@ -18,7 +18,7 @@ export default function Products() {
 
 
     return (
-        <div className="container text-center pt-5">
+        <div className="container text-center">
             <h1>I nostri prodotti</h1>
             <div className="container">
                 <div className="row g-4">

@@ -6,6 +6,11 @@
 
 .logo {
   width: auto;
-  height: 80px;
+  height: 60px;
 
+}
+
+.layout-content {
+  margin-top: 50px;
+  /* Aggiunge uno spazio extra oltre il padding di Bootstrap */
 }

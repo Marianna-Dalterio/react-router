@@ -10,7 +10,7 @@ export default function DefaultLayout() {
         <div>
             <Navbar />
             {/* con pt-3 il contenuto che viene dalle rotte è spinto verso il basso dato che la navbar è fissa  */}
-            <main className="pt-5">
+            <main className="pt-5 layout-content">
                 <Outlet />
             </main>
 
