@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 // API  https://fakestoreapi.com/
-
+import SingleProduct from "./SingleProduct";
+import { Link } from "react-router-dom";
 
 
 export default function Products() {
@@ -27,13 +28,15 @@ export default function Products() {
 
                         <div key={item.id} className="col-12 col-md-6 col-lg-4 ">
                             <div className="card h-100">
+                                <Link to={`/products/${item.id}`}>
+                                    <img
+                                        src={item.image}
+                                        alt={item.title}
+                                        className="card-img-top p-3"
+                                        style={{ height: "300px", objectFit: "contain" }}
+                                    />
+                                </Link>
 
-                                <img
-                                    src={item.image}
-                                    alt={item.title}
-                                    className="card-img-top p-3"
-                                    style={{ height: "300px", objectFit: "contain" }}
-                                />
 
                                 <div className="card-body d-flex flex-column">
                                     <h5 className="card-title">{item.title}</h5>
