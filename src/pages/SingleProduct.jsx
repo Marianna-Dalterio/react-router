@@ -3,17 +3,24 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function SingleProduct() {
+    // 1. Recupero l'ID
     const { id } = useParams()
-    const [products, setProducts] = useState([]);
+    // Inizializzo lo stato del prodotto a 'null'
+    const [product, setProduct] = useState(null);
 
     function fetchData() {
-        axios.get("https://fakestoreapi.com/products")
-            .then((res) => setProducts(res.data))
+        axios.get(`https://fakestoreapi.com/products/${id}`)
+            .then((res) => setProduct(res.data))
             .catch((error) => console.log("Errore nel recupero dati:", error));
     }
-    useEffect(fetchData, []);
+
+    //2: Aggiungo [id] come dipendenza. L'effetto si riesegue se l'ID cambia.
+    useEffect(fetchData, [id]);
 
     return (
-        <h1>This is the product detail page</h1>
+        <div>
+            <h1>{`Scopri di più su:${product.title} `}</h1>
+        </div>
+
     )
 }
